@@ -185,10 +185,41 @@ sudo apt-get update
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
+git@github.com:ZIKUU-SPACE/dev_setup.git
 
-一般ユーザ権限でDockerを使用できるようにする。
+
+## 最新版のNodeJSのインストール
+
 ```
-sudo groupadd docker
-sudo usermod -aG docker $USER
+sudo apt update && sudo apt upgrade
 ```
+```
+sudo apt install curl apt-transport-http ca-certificates
+```
+```
+curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
+```
+
+最新版のバージョンを確認する。
+
+[https://nodejs.org/en](https://nodejs.org/en)
+
+*執筆では最新バージョンは22だった。*
+
+```
+NODE_MAJOR=22
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /usr/share/keyrings/nodesource.gpg
+```
+```
+sudo apt install nodejs
+```
+
+
+## Rustのインストール
+
+```
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+```
+
+
 
