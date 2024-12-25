@@ -1,15 +1,20 @@
 # Linux (Ubuntu) 開発者向けセットアップ
 
-## gitのインストール
+[モノづくり塾『ZIKUU』](https://zikuu.space)塾長の作業環境から、汎用的に使えそうな設定を抜き出してまとめた文書です。プログラマーやエンジニアを目指す方にオススメです。
+
+この文書では、各ソフトウェアのインストールと基本設定をコピーペーストして行えるようにしています。
+各項目の詳細な説明は省略しているので、操作方法等はそれぞれネット検索してわかりやすい説明を探してください。
+
+## Gitのインストール
 
 ```
 sudo apt update
 sudo apt install git
 ```
 
-Ubuntuは最初からgitがインストールされている筈ですので、この作業は不要。
+Ubuntuは最初からgitがインストールされている筈ですので、この作業は不要です。
 
-## neovimのインストール
+## Neovimのインストール
 
 ZIKUUで使用しているNeovimの設定です。インストールするには次のコマンドを実行します。次のコマンドでインストールします。
 
@@ -19,6 +24,9 @@ sudo add-apt-repository ppa:neovim-ppa/unstable
 sudo apt update
 sudo apt install neovim
 ```
+
+Neovimを使いこなせると、サーバーの設定や遠隔コンピューターの管理など、GUIを使えないときのテキスト編集作業で役に立ちます。
+
 
 ### Neovimの設定をGithubからダウンロード
 
@@ -88,6 +96,8 @@ sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
 
 
 ## Githubへのsshキーの登録
+
+これはGithubとのやり取りで毎回パスワードを入力しなくても良くする設定です。
 
 ### sshキーの生成
 
@@ -221,5 +231,18 @@ sudo apt install nodejs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
+## tmuxのインストール
 
+tmuxはターミナルベースのウィンドウマネージャで、ターミナル画面を分割して複数のウィンドウを表示することができます。
+
+```
+sudo apt update
+sudo apt install tmux
+```
+
+インストールが終わったら
+```
+tmux
+```
+で起動し、Ctrl+B, " (ダブルクオート)で画面を上下分割、Ctrl+B %で画面を左右分割できるのが確認できると思います。
 
