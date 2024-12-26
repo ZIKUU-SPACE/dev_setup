@@ -233,7 +233,7 @@ sudo apt install nodejs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 ```
 
-## tmuxのインストール
+## tmuxのインストール (R6/12/26追記)
 
 tmuxはターミナルベースのウィンドウマネージャで、ターミナル画面を分割して複数のウィンドウを表示することができます。
 
