@@ -248,3 +248,13 @@ tmux
 ```
 で起動し、Ctrl+B, " (ダブルクオート)で画面を上下分割、Ctrl+B %で画面を左右分割できるのが確認できると思います。
 
+## Glowのインストール
+
+Glowはターミナル上でMarkdown形式の文書をプレビューするソフトウエアです。
+
+```
+sudo mkdir -p /etc/apt/keyrings
+curl -fsSL https://repo.charm.sh/apt/gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/charm.gpg
+echo "deb [signed-by=/etc/apt/keyrings/charm.gpg] https://repo.charm.sh/apt/ * *" | sudo tee /etc/apt/sources.list.d/charm.list
+sudo apt update && sudo apt install Glow
+```
