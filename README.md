@@ -65,7 +65,7 @@ sudo apt install codium -y
 
 ## zshのインストール
 
-###ケージマネージャを使ってzshをインストール
+### パケージマネージャを使ってzshをインストール
 
 ```
 sudo apt update
