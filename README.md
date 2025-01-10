@@ -43,6 +43,7 @@ PackerはNeovim用のパッケージマネージャーです。
 次のコマンドでPacker をインストールします。
 
 ```
+sudo apt install curl
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 ```
@@ -196,8 +197,9 @@ sudo apt-get update
 
 
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+
+sudo usemod -aG docker $USER
 ```
-git@github.com:ZIKUU-SPACE/dev_setup.git
 
 
 ## 最新版のNodeJSのインストール
@@ -206,7 +208,7 @@ git@github.com:ZIKUU-SPACE/dev_setup.git
 sudo apt update && sudo apt upgrade
 ```
 ```
-sudo apt install curl apt-transport-http ca-certificates
+sudo apt install curl apt-transport-https ca-certificates
 ```
 ```
 curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /usr/share/keyrings/nodesource.gpg
