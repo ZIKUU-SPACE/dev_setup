@@ -23,6 +23,8 @@ ZIKUUで使用しているNeovimの設定です。インストールするには
 
 ```
 sudo add-apt-repository ppa:neovim-ppa/unstable
+または
+sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim
 ```
