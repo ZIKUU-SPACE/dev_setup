@@ -22,8 +22,6 @@ ZIKUUで使用しているNeovimの設定です。インストールするには
 
 
 ```
-sudo add-apt-repository ppa:neovim-ppa/unstable
-または
 sudo add-apt-repository ppa:neovim-ppa/stable
 sudo apt update
 sudo apt install neovim
@@ -100,7 +98,7 @@ sh -c "$(curl -fsSL https://install.ohmyz.sh/)"
 
 
 
-## Githubへのsshキーの登録
+## Githubへのsshキーの登録（任意）
 
 これはGithubとのやり取りで毎回パスワードを入力しなくても良くする設定です。
 
@@ -204,7 +202,7 @@ sudo usermod -aG docker $USER
 ```
 
 
-## 最新版のNodeJSのインストール
+## 最新版のNodeJSのインストール（任意）
 
 ```
 sudo apt update && sudo apt upgrade
@@ -223,15 +221,14 @@ curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg 
 *執筆では最新バージョンは22だった。*
 
 ```
-NODE_MAJOR=22
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /usr/share/keyrings/nodesource.gpg
+echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_22.x nodistro main" | sudo tee /usr/share/keyrings/nodesource.gpg
 ```
 ```
 sudo apt install nodejs
 ```
 
 
-## Rustのインストール
+## Rustのインストール（任意）
 
 ```
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
@@ -252,7 +249,7 @@ tmux
 ```
 で起動し、Ctrl+B, " (ダブルクオート)で画面を上下分割、Ctrl+B %で画面を左右分割できるのが確認できると思います。
 
-## Glowのインストール
+## Glowのインストール（任意）
 
 Glowはターミナル上でMarkdown形式の文書をプレビューするソフトウエアです。
 
